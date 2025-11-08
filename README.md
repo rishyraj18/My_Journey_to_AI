@@ -43,4 +43,4 @@ To explore, learn, and build practical AI solutions while strengthening my found
 ---
 
 *Author:* **Rishy Raj**  
-*University:* BITS Pilani — B.Tech in Information Systems 
+*University:* BITS Pilani — B.Tech in Information Systems
