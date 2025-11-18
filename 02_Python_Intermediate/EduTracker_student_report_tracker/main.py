@@ -27,13 +27,13 @@ while inp != 9:
     match inp:
             case 1:
                 print("Give the below Details for student registeration")
-                std_id = input("Please enter the student ID: ")
+                std_id = input("Please enter student ID: ")
                 name = input("Please enter student name: ")
                 roll_no = int(input("Please enter Roll_no: "))
                 course_name = input("Please Enter Course name:")
                 student_ID[std_id] = student(name, roll_no, course_name)
             case 2:
-                std_id = input("Please the student_ID to change the details: ")
+                std_id = input("Please enter student_ID to change the details: ")
                 n_name = input("Please Enter the Name: ")
                 if std_id in student_ID:
                     if validate_name(n_name):
@@ -44,8 +44,8 @@ while inp != 9:
                     print("Please Enter Correct Student ID")
 
             case 3:
-                course_id = input("Please Enter the Course ID: ")
-                course_name = input("Please Enter the Course Name: ")
+                course_id = input("Please Enter Course ID: ")
+                course_name = input("Please Enter Course Name: ")
                 course_duration = input("Please Enter the Course Duration: ")
                 if course_id not in course_ID:
                     course_ID[course_id] = course(course_name, course_duration)
@@ -53,16 +53,12 @@ while inp != 9:
                     print("Course ID already Exists")
 
             case 4:
-                course_id = input("Please Enter the Course ID: ")
-                n_course_name = input("Please Enter your new course name: ")
-                if course_id in course_ID:
-                    if validate_name(n_course_name):
-                        course_ID[course_id].add_topic(n_course_name)
-                    else:
-                        print("Course Name format Mismatch") 
+                course_id = input("Please Enter Course ID: ")
+                topics = input("Please Enter the topics need to be added: ")
+                course_ID[course_id].add_topic(topics)
 
             case 5:
-                std_id = input("Please the student_ID to update Marks: ")
+                std_id = input("Please enter student_ID to update Marks: ")
                 marks = int(input("Please enter marks: "))
                 if std_id in student_ID:
                     student_ID[std_id].update_marks(marks)
@@ -70,7 +66,7 @@ while inp != 9:
                     print("Please Enter Correct Student ID")
                 
             case 6:
-                std_id = input("Please the student_ID to update Marks: ")
+                std_id = input("Please enter student_ID to update Attendance: ")
                 attendance = int(input("Please enter attendance: "))
                 if std_id in student_ID:
                     student_ID[std_id].update_attendance(attendance)
@@ -78,13 +74,14 @@ while inp != 9:
                     print("Please Enter Correct Student ID")
             
             case 7:
-                std_id = input("Please the student_ID to update Marks: ")
+                std_id = input("Please enter student_ID to view details: ")
                 if std_id in student_ID:
                     student_ID[std_id].display_info()
                 else:
                     print("Please Enter Correct Student ID")
                 
             case 8:
+                print("List of all students")
                 for std_id in student_ID:
                     student_ID[std_id].view_name()
 
@@ -92,6 +89,3 @@ while inp != 9:
                 print("Please Enter Correct option")
     
 print("Exiting EduTracker Module")
-
-
-
