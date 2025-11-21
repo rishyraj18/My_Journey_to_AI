@@ -59,7 +59,10 @@ while i != 8:
         case 2:
             atck_player = str(input("Please enter the Player name attacking: "))
             other_player = str(input("Please enter the player your Attacking: "))
-            players[atck_player].fire_weapon(players[other_player])
+            if atck_player in players and other_player in players:
+                players[atck_player].fire_weapon(players[other_player])
+            else:
+                print("Wrong Player name entered")
         case 3:
             atck_player = str(input("Please enter the Player name attacking: "))
             other_player = str(input("Please enter the player your Attacking: "))
@@ -78,5 +81,31 @@ while i != 8:
                   print(f"{players[other_player]._player_name} Shield Health : {players[other_player]._shield}")
             else:
                 print("Wrong Player name entered")
-          
+        case 4:
+            rechg_player = str(input"Please enter player shiled need to be recharged: ")
+            if rechg_player in players:
+                players[rechg_player].recharge_shield()
+            else:
+                print("Wrong Player name entered")
+        case 5:
+            rstr_player = str(input("Please enter the player name to restore health: "))
+             if rechg_player in players:
+                players[rstr_player].restore_health()
+            else:
+                print("Wrong Player name entered")
+        case 6:
+            player_name= str(input("Please enter the player name to get shield: "))
+            if player_name in players:
+                print(str(players[player_name]))
+            else:
+                print("Wrong Player name entered")
+        case 7:
+            player_name= str(input("Please enter the player name to get Health: "))
+            if player_name in players:
+                print(len(players[player_name]))
+            else:
+                print("Wrong Player name entered")
+        case _:
+            print("Wrong option selected,Please select correct option")
+
 print("Exiting The Game")
