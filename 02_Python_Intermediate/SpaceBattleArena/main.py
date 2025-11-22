@@ -82,17 +82,17 @@ while i != 8:
             else:
                 print("Wrong Player name entered")
         case 4:
-            rechg_player = str(input"Please enter player shiled need to be recharged: ")
+            rechg_player = str(input("Please enter player shiled need to be recharged: "))
             if rechg_player in players:
                 players[rechg_player].recharge_shield()
             else:
                 print("Wrong Player name entered")
         case 5:
             rstr_player = str(input("Please enter the player name to restore health: "))
-             if rechg_player in players:
+            if rechg_player in players:
                 players[rstr_player].restore_health()
             else:
-                print("Wrong Player name entered")
+               print("Wrong Player name entered")
         case 6:
             player_name= str(input("Please enter the player name to get shield: "))
             if player_name in players:
@@ -102,9 +102,13 @@ while i != 8:
         case 7:
             player_name= str(input("Please enter the player name to get Health: "))
             if player_name in players:
-                print(len(players[player_name]))
+
+                print(f"Health of the Player is {len(players[player_name])}")
             else:
                 print("Wrong Player name entered")
+        case 8:
+            pass
+
         case _:
             print("Wrong option selected,Please select correct option")
 

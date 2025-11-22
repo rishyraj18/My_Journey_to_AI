@@ -8,6 +8,11 @@ class Baseship(ABC):
         self._shield = shield
         self._power = power
         self._life = life
+
+    
+    @abstractmethod
+    def recharge_shield(self):
+        pass
         
     def take_damage(self,other):
         if other._shield > 100:
@@ -31,7 +36,10 @@ class Baseship(ABC):
         print(f"shield recharged\nShield power : {self._shield}")
     
     def __str__(self):
-        print(f"Sheld Power remaning for the player {self._player_name}: {self._shield}")
+        return f"Sheld Power remaning for the player {self._player_name}: {self._shield}"
+    
+    def __len__(self):
+        return self._shield
 
 class FighterShip(Baseship):
     def __init__(self, Player_name, health = 1000, shield = 750, power= 100,life = 3):
@@ -51,7 +59,7 @@ class FighterShip(Baseship):
             other._health -= (self._power*2)
             print(f"Heath : {other._health}")
 
-    def restore_health:
+    def restore_health(self):
         if self._life > 0:
             print(f"Restoring health for player {self._player_name}")
             self._life -= 1
@@ -77,7 +85,7 @@ class DestroyerShip(Baseship):
             other._health -= (self._power*2)
             print(f"Heath : {other._health}")
 
-    def restore_health:
+    def restore_health(self):
         if self._life > 0:
             print(f"Restoring health for player {self._player_name}")
             self._life -= 1
@@ -103,7 +111,7 @@ class HybridShip(Baseship):
             other._health -= (self._power*2)
             print(f"Heath : {other._health}")
     
-    def restore_health:
+    def restore_health(self):
         if self._life > 0:
             print(f"Restoring health for player {self._player_name}")
             self._life -= 1
