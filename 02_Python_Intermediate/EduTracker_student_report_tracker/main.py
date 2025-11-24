@@ -7,7 +7,6 @@ from Utility.validators import validate_mark, validate_name, validate_roll
 print("Hi, Welcome to EduTrack_Student_report_tracker")
 
 
-
 inp = None
 student_ID = {}
 course_ID = {}
