@@ -1,7 +1,7 @@
-from cart import cart
-from order import order
-from product import products
-from user import user
+from core.cart import cart
+from core.order import order
+from core.product import products
+from core.user import user
 
 print("Welcome to RR Ecommerce")
 
