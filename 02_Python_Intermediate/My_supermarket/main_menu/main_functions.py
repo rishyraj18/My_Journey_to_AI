@@ -1,4 +1,4 @@
-from core.adminfunctionalities.product import products, add_products
+from core.adminfunctionalities.product import products, add_products, product_quantity, product_price
 from utilitis.validations import product_validation
 from core.userfunctionalities.cart import cart
 from core.userfunctionalities.user import user, new_user
@@ -37,9 +37,9 @@ def main_menu(username):
                   case 4:
                         cart.cart[username].remove_product()
                   case 5:
-                        username.calculate_total()
+                        cart.cart[username].calculate_total()
                   case 6:
-                        username.placeorder()
+                        cart.cart[username].placeorder()
                   case 7:
                         order.display_order_details(username)
                   case 8:
@@ -54,13 +54,9 @@ def main_menu(username):
                         if inp == 1:
                               add_products()
                         elif inp == 2:
-                              product_ID = input("Please enter product ID: ")
-                              product_price = input("Please enter product Price: ")
-                              product_ID.change_product_price(product_price)
+                              product_price()
                         elif inp == 3:
-                              product_ID = input("Please enter product ID: ")
-                              product_quantity = input("Please enter product quantity: ")
-                              product_ID.change_product_quantity(product_quantity)
+                              product_quantity()
                         else:
                               print("Please Select correct option")
 

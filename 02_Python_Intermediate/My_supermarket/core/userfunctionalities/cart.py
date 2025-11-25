@@ -37,9 +37,9 @@ class cart:
                     'quantity' : 1
                 }
                 temp = products.inventory[product]._product_name
-                print(f"Product Added : {temp}")
+                print(f"Product Removed : {temp}")
             elif self._product_list[product]["quantity"] == 1:
-                del cart.cart[product]
+                del self._product_list[product]
             else:
                 self._product_list[product]["quantity"] -= 1
                 self._product_list[product]['price'] -= products.inventory[product]._product_price
@@ -50,7 +50,7 @@ class cart:
 
 
     def display_cart(self):
-        if cart.cart == {}:
+        if self._product_list == {}:
             print("cart is Empty")
 
         for pid, details in self._product_list.items():

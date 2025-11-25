@@ -37,3 +37,14 @@ def add_products():
     product_quantity = input("Please enter product quantity: ")
     products.inventory[pid] = products(pid,product_name, product_price, product_quantity)
 
+
+def product_price():
+    pid = input("Please enter product ID: ")
+    product_price = input("Please enter product price: ")
+    products.inventory[pid].change_product_price(product_price)
+
+def product_quantity():
+    pid = input("Please enter product ID: ")
+    product_quantity = input("Please enter product quantity: ")
+    products.inventory[pid].update_quantity(product_quantity)
+
