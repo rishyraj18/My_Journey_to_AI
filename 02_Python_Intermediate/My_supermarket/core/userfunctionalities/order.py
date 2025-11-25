@@ -1,4 +1,5 @@
-from product import products
+from core.adminfunctionalities.product import products
+
 
 class order:
     list_of_orders = {}
@@ -9,15 +10,9 @@ class order:
         self._no_of_items = no_of_items
         self._items = items
         print("Order Placed, Successfully")
-        order.list_of_orders[Order_ID]= {
-            "Order ID" : Order_ID,
-            "Total Amount" : Total_amount,
-            "No of Items" : no_of_items,
-            "Items" : items
-            }
 
-    def display_order_details(self):
-        for oid, details in order.list_of_orders.items():
+    def display_order_details(order_id):
+        for order_id, details in order.list_of_orders.items():
             print(f"""Order ID : {[details["Order ID"]]}
 Items = {[details["Items"]]}
 Total Amount : {[details["Total Amount"]]}""")
