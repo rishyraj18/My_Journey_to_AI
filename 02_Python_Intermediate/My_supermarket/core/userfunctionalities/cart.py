@@ -1,5 +1,6 @@
 from core.userfunctionalities.order import order,create_order
 from core.adminfunctionalities.product import products
+from core.utilities.validations import product_validation
 
 
 class cart:
@@ -8,7 +9,7 @@ class cart:
         self._cart_ID = cart_ID
 
     def add_products(self, product):
-        if product in products.inventory:
+        if product_validation(product)
             if product not in self._product_list: 
                 cart_List[cart_ID] = {
                     'name' : products.inventory[product]._product_name,
@@ -44,9 +45,6 @@ class cart:
                 self._product_list[product]['price'] -= products.inventory[product]._product_price
                 temp = products.inventory[product]._product_name
                 print(f"Product Removed: {temp}")
-        else:
-            print("Unbale to find the Product ID")
-
 
     def display_cart(self):
         if self._product_list == {}:

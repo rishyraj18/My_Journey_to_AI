@@ -19,6 +19,6 @@ class login_username_invalid(Exception):
         super().__init__(self.message)
 
 class product_validation(Exception):
-    def __init__(self, message = "Invalid Product ID"):
+    def __init__(self, message = "Unbale to find the Product ID"):
         self.messaga = message
         super().__init__(self.messaga)
