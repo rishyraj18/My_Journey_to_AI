@@ -82,5 +82,3 @@ Quantity : {cart_List[cart_ID]["quantity"]}""")
 
 def create_cart(uname):
     cart.cart_List[uname] = cart(uname)
-
-
