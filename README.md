@@ -17,15 +17,15 @@ This repository documents my continuous learning in Artificial Intelligence — 
 ---
 
 ## 🧩 Projects
-| Project | Description |
-|----------|--------------|
-| BMI Calculator | Simple Python-based health calculator |
-| Data Visualizer | Data visualization using Pandas & Seaborn |
-| House Price Prediction | Machine learning regression project |
-| Spam Detector | NLP-based text classification |
-| Text Summarizer | Transformer-based text summarizer (BERT) |
-| Chatbot | GPT-powered conversational assistant |
-| Transformer Replica | Reimplementation of "Attention Is All You Need" |
+| Project                   | Description |
+|----------                 |--------------|
+| BMI Calculator            | Simple Python-based health calculator |
+| Data Visualizer           | Data visualization using Pandas & Seaborn |
+| House Price Prediction    | Machine learning regression project |
+| Spam Detector             | NLP-based text classification |
+| Text Summarizer           | Transformer-based text summarizer (BERT) |
+| Chatbot                   | GPT-powered conversational assistant |
+| Transformer Replica       | Reimplementation of "Attention Is All You Need" |
 
 ---
 
