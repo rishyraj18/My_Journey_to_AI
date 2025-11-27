@@ -33,13 +33,13 @@ def main_menu(username):
                         if product_validation(product_ID):
                               cart.cart[username].add_products(product_ID)
                   case 3:
-                        cart.cart[username].display_cart()
+                        cart.cart_List[username].display_cart()
                   case 4:
-                        cart.cart[username].remove_product()
+                        cart.cart_List[username].remove_product()
                   case 5:
-                        cart.cart[username].calculate_total()
+                        cart.cart_List[username].calculate_total()
                   case 6:
-                        cart.cart[username].placeorder()
+                        cart.cart_List[username].placeorder()
                   case 7:
                         order.display_order_details(username)
                   case 8:

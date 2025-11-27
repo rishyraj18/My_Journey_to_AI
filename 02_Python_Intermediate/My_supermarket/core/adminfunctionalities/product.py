@@ -30,6 +30,9 @@ class products:
         else:
             print("Product details unavailable")
 
+products.inventory["P1"] = products("P1", "Laptop", 50000, 5)
+products.inventory["P1"] = products("P1", "Mobile", 20000, 5)
+
 def add_products():
     pid = input("Please enter product ID: ")
     product_name = input("Please enter product name: ")
