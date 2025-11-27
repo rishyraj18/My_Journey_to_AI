@@ -9,6 +9,12 @@ class order:
         self._Total_amount = Total_amount
         self._no_of_items = no_of_items
         self._items = items
+        self.order_list [Order_ID]= {
+            'Order ID' = Order_ID,
+            'Total Amount' = Total_amount,
+            'No of Items' = no_of_items,
+            'Items' = items
+        }
 
     def display_order_details(order_ID):
         for order_id in order.list_of_orders:
@@ -18,6 +24,8 @@ Total Amount : {order.list_of_orders[order_ID]._Total_amount}
 Items : {order.list_of_orders[order_ID]._items}
 Total No of Items : {order.list_of_orders[order_ID]._no_of_items}
     """)
+
+
 
 def create_order(Order_ID,Total_amount, no_of_items, Items):
     order.list_of_orders[Order_ID] = order(Order_ID, Total_amount, no_of_items,Items)

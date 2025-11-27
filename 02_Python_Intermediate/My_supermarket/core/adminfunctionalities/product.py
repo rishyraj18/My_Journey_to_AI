@@ -31,7 +31,8 @@ class products:
             print("Product details unavailable")
 
 products.inventory["P1"] = products("P1", "Laptop", 50000, 5)
-products.inventory["P1"] = products("P1", "Mobile", 20000, 5)
+products.inventory["P2"] = products("P2", "Mobile", 20000, 5)
+products.inventory["P3"] = products("P3", "Ipad", 45000, 6)
 
 def add_products():
     pid = input("Please enter product ID: ")
@@ -39,7 +40,6 @@ def add_products():
     product_price = input("Please enter product price: ")
     product_quantity = input("Please enter product quantity: ")
     products.inventory[pid] = products(pid,product_name, product_price, product_quantity)
-
 
 def product_price():
     pid = input("Please enter product ID: ")

@@ -30,8 +30,8 @@ def main_menu(username):
                         products.print_all_products()
                   case 2:
                         product_ID = input("Please enter the product ID: ")
-                        if product_validation(product_ID):
-                              cart.cart[username].add_products(product_ID)
+                        if product_valid(product_ID):
+                              cart.cart[username].add_products()
                   case 3:
                         cart.cart_List[username].display_cart()
                   case 4:
