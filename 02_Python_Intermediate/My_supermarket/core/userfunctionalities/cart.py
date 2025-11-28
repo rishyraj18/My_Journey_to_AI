@@ -1,44 +1,40 @@
-from core.userfunctionalities.order import order,create_order
+from core.userfunctionalities.order import order, create_order
 from core.adminfunctionalities.product import products
-from utilitis.validations import product_validation
+from utilitis.validations import product_validation_error
 
 class cart:
     cart_List= {}
     def __init__(self, cart_ID):
         self._cart_ID = cart_ID
-        self._product_list = []
+        self._product_list = {}
 
 
-    def add_products(self):
-        print("Please enter Product ID to add in cart: ")
-        if product_validation(product):
-            if product not in self._product_list: 
-                self._product_list[products.inventory[product]] = {
-                    'name' : products.inventory[product]._product_name,
-                    'price' : products.inventory[product]._product_price,
-                    'quantity' : 1
-                }
-                temp = products.inventory[product]._product_name
-                print(f"Product Added : {temp}")
-            else:
-                self._product_list[product]["quantity"] += 1
-                self._product_list[product]["price"] += products.inventory[product]._product_price
-                temp = products.inventory[product]._product_name
-                print(f"Product Added : {temp}")
+    def add_products(self, PID):
+        if PID not in self._product_list:
+            self._product_list[PID] = {
+                'name' : products.inventory[PID]._product_name,
+                'price' : products.inventory[PID]._product_price,
+                'quantity' : 1
+            }
+            temp = products.inventory[PID]._product_name
+            print(f"Product Added : {temp}")
         else:
-            print("Unbale to find the Product ID")
+            self._product_list[PID]["quantity"] += 1
+            self._product_list[PID]["price"] += products.inventory[PID]._product_price
+            temp = products.inventory[PID]._product_name
+            print(f"Product Added : {temp}")
 
     def remove_product(self):
-        product = input("Please Enter Product ID: ")
-        if product in self._product_list:
-            if product not in self._product_list:
+        PID = input("Please Enter Product ID: ")
+        if PID in self._product_list:
+            if PID not in self._product_list:
                 print("Product Not Added in Cart")
-            elif self._product_list[product]["quantity"] == 1:
-                del self._product_list[product]           
+            elif self._product_list[PID]["quantity"] == 1:
+                del self._product_list[PID]           
             else:
-                self._product_list[product]["quantity"] -= 1
-                self._product_list[product]['price'] -= products.inventory[product]._product_price
-                temp = products.inventory[product]._product_name
+                self._product_list[PID]["quantity"] -= 1
+                self._product_list[PID]['price'] -= products.inventory[PID]._product_price
+                temp = products.inventory[PID]._product_name
                 print(f"Product Removed: {temp}")
 
     def display_cart(self):
@@ -68,11 +64,12 @@ Quantity : {self._product_list[product]["quantity"]}""")
         no_of_items = 0
         Items = []
         for product in self._product_list:
-            products.inventory[product][quantity] -= self._product_list[product]["quantity"]
+            products.inventory[product]._product_quantity -= self._product_list[product]["quantity"]
             Total_amount += self._product_list[product]["price"]
             no_of_items += self._product_list[product]["quantity"]
-            Items.append(self._product_list[product]["Name"])
-        order.create_order(Order_ID,Total_amount, no_of_items, Items)
+            Items.append(self._product_list[product]["name"])
+        create_order(Order_ID,Total_amount, no_of_items, Items)
+        self._product_list = {}
           
 
 def create_cart(uname):

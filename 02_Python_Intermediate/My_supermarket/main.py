@@ -1,8 +1,7 @@
-from core.userfunctionalities.user import user, new_user
+from core.userfunctionalities.user import new_user
 from utilitis.validations import verify_Login
-from utilitis.exceptions import Inputvalidation, login_password_invalid, login_username_invalid, product_validation
-from core.userfunctionalities.cart import cart, create_cart
-from core.adminfunctionalities.product import products
+from utilitis.exceptions import login_password_invalid, login_username_invalid
+from core.userfunctionalities.cart import create_cart
 from main_menu.main_functions import main_menu
 
 
@@ -21,16 +20,20 @@ def login_fuction():
 
 def initializing_module():
       print("1: Login to Initialization\n"
-      "2. Create New User\n")
+      "2. Create New User\n"
+      "0. Exit")
 
       initial_input = int(input("Please select you option: "))
       while initial_input !=1 or initial_input !=2:
             if initial_input == 1:
                   #initialing User Login
                   login_fuction()
+
             elif initial_input == 2:
                   new_user()
                   initializing_module()
+            elif initial_input == 0:
+                   exit()
             else:
                   print("Wrong option seleteced")
                   initializing_module()
