@@ -1,10 +1,13 @@
-class character:
+# A simple Python game simulation using OOP with Warrior, Mage, and Archer classes,
+# featuring attacks, health tracking, and multiple battle rounds.
+
+class character:                                            #Parent Class                                               
     def __init__(self, player_name, player_health, player_attack_power):
         self.player_name = player_name
         self.__player_health = player_health
         self.__player_attack_power = player_attack_power
 
-    def attack(self, target):
+    def attack(self, target):                               # Attack Class
         if target.__player_health > 0:
             target.__player_health -= self.__player_attack_power
             print(f"{target.player_name} is attacked by {self.player_name}")
@@ -51,7 +54,7 @@ p1.attack(p2)
 p2.attack(p3)
 p3.attack(p1)
 
-print("\n--- 📊 Status After Round ---")
+print("\n--- 📊 Status After Round 1 ---")
 p1.get_health()
 p2.get_health()
 p3.get_health()
@@ -60,7 +63,7 @@ p1.attack(p2)
 p2.attack(p3)
 p3.attack(p1)
 
-print("\n--- 📊 Status After Round ---")
+print("\n--- 📊 Status After Round 2---")
 p1.get_health()
 p2.get_health()
 p3.get_health()
