@@ -1,4 +1,5 @@
-import os, csv
+import os
+import csv
 from abc import ABC, abstractmethod
 
 currentdirpath = os.path.dirname(os.path.abspath(__file__))
@@ -6,7 +7,7 @@ flights_csv = os.path.join(currentdirpath, "data", "flight.csv")
 
 flights_obj = {}
 
-class flights(ABC):
+class Flights(ABC):
     def __init__ (self, flight_number, origin, destination, price, date, f_type):
         self._flight_number = flight_number
         self._origin = origin
@@ -17,12 +18,12 @@ class flights(ABC):
     
     def to_dict(self):
         return{
-            "flight_number" : {self._flight_number},
-            "orign" : {self._origin},
-            "destination" : {self._destination},
-            "price" : {self._price},
-            "date" : {self._date},
-            "f_type" : {self._ftype}
+            "flight_number" : self._flight_number,
+            "origin" : self._origin,
+            "destination" : self._destination,
+            "price" : self._price,
+            "date" : self._date,
+            "f_type" : self._ftype
         }
     
     def __str__(self):
@@ -42,7 +43,7 @@ class flights(ABC):
     def cancel_flight(self):
         pass
 
-class domestic_flight(flights):
+class DomesticFlight(Flights):
 
     def __init__(self, flight_number, origin, destination, price, date, ftype = "Domestic"):
         super().__init__(flight_number, origin, destination, price, date, ftype)
@@ -55,7 +56,7 @@ class domestic_flight(flights):
         else:
             print("Booking Not Confirmed")
 
-class international_flights(flights):
+class InternationalFlights(Flights):
     def __init__(self, flight_number, origin, destination, price, date, ftype = "International"):
         super().__init__(flight_number, origin, destination, price, date, ftype)
 
@@ -64,20 +65,34 @@ class international_flights(flights):
         confirmation = input("Do you want to proceed (Y/N)? : ")
         if confirmation == "Y":
             confirmation2 = input("Please Confirm do you have a passport with valid Visa for your destination? : ")
-            if confirmation2 = "Y":
+            if confirmation2 == "Y":
                 print("Booking Confirmed")
             else:
                 print("Booking Not Confirmed")
         else:
             print("Booking Not Confirmed")
 
+    def cancel_flight(self):
+        confirmation = input("Do you need cancel the flight (Y/N)? : ")
+        if confirmation == "Y":
+            print("Booking Canceled")
+        else:
+            print("Booking not Canceled")
+
 
 with open(flights_csv, "r", encoding = "utf-8") as f:
     flight_csv = DictReader(f)
-    for row in flight_csv
+    for row in flight_csv:
         flightnum = row["flight_number"]
         if row["f_type"] == "Domestic":
-            flights_obj[flightnum] = domestic_flight(row["flight_number"], row["origin"], row["destination"], row["price"], row["date"], row["ftype"])
+            flights_obj[flightnum] = DomesticFlight(row["flight_number"], row["origin"], row["destination"], row["price"], row["date"], row["f_type"])
         else:
-            flights_obj[flightnum] = international_flights(row["flight_number"], row["origin"], row["destination"], row["price"], row["date"], row["ftype"])
+            flights_obj[flightnum] = InternationalFlights(row["flight_number"], row["origin"], row["destination"], row["price"], row["date"], row["f_type"])
 
+def exit():
+    with open(flight_csv, "w", encoding = "utf-8", newline = "") as f:
+        fieldnames = ["flight_number","origin","destination","price","date","f_type"]
+        writer = csv.DictWriter(f, fieldnames = fieldnames)
+        for flight in flights_obj.values():
+            writer.writerow(flight.to_dict())
+        
