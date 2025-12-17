@@ -1,0 +1,11 @@
+treatment_tests,price
+Consultation,200
+MRI Scan,500
+X-Ray Scan,400
+Blood Test,150
+CT Scan,700
+ECG,300
+Ultrasound Scan,450
+Physiotherapy Session,250
+Minor Surgery,1200
+Major Surgery,5000
