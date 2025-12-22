@@ -6,15 +6,325 @@
         "Phone Number": "9080976475",
         "Gender": "M",
         "Address": "Erode",
-        "Treatments": []
+        "Treatments": [
+            "Consultation",
+            "Blood Test"
+        ],
+        "Status": "Discharged"
     },
     "P02": {
         "Name": "Rocky",
         "Age": 4,
-        "Admitted Date": "2025-12-14",
+        "Admitted Date": "2025-06-14",
         "Phone Number": "9790032932",
         "Gender": "M",
         "Address": "Tamil Nadu",
-        "Treatments": []
+        "Treatments": [
+            "Consultation",
+            "X-Ray Scan"
+        ],
+        "Status": "Admitted"
+    },
+    "P03": {
+        "Name": "Ananya",
+        "Age": 29,
+        "Admitted Date": "2024-08-02",
+        "Phone Number": "9876543210",
+        "Gender": "F",
+        "Address": "Coimbatore",
+        "Treatments": [
+            "Consultation",
+            "Ultrasound Scan"
+        ],
+        "Status": "Admitted"
+    },
+    "P04": {
+        "Name": "Karthik",
+        "Age": 45,
+        "Admitted Date": "2023-11-19",
+        "Phone Number": "9123456789",
+        "Gender": "M",
+        "Address": "Salem",
+        "Treatments": [
+            "Consultation",
+            "ECG"
+        ],
+        "Status": "Discharged"
+    },
+    "P05": {
+        "Name": "Priya",
+        "Age": 34,
+        "Admitted Date": "2024-01-10",
+        "Phone Number": "9988776655",
+        "Gender": "F",
+        "Address": "Chennai",
+        "Treatments": [
+            "Consultation",
+            "Blood Test",
+            "MRI Scan"
+        ],
+        "Status": "Admitted"
+    },
+    "P06": {
+        "Name": "Arjun",
+        "Age": 27,
+        "Admitted Date": "2023-05-22",
+        "Phone Number": "9876501234",
+        "Gender": "M",
+        "Address": "Madurai",
+        "Treatments": [
+            "Consultation",
+            "Physiotherapy Session"
+        ],
+        "Status": "Discharged"
+    },
+    "P07": {
+        "Name": "Divya",
+        "Age": 31,
+        "Admitted Date": "2024-03-15",
+        "Phone Number": "9012345678",
+        "Gender": "F",
+        "Address": "Trichy",
+        "Treatments": [
+            "Consultation",
+            "CT Scan"
+        ],
+        "Status": "Admitted"
+    },
+    "P08": {
+        "Name": "Suresh",
+        "Age": 52,
+        "Admitted Date": "2022-07-08",
+        "Phone Number": "9090909090",
+        "Gender": "M",
+        "Address": "Vellore",
+        "Treatments": [
+            "Consultation",
+            "ECG",
+            "Blood Test"
+        ],
+        "Status": "Discharged"
+    },
+    "P09": {
+        "Name": "Meena",
+        "Age": 40,
+        "Admitted Date": "2023-09-12",
+        "Phone Number": "9345678123",
+        "Gender": "F",
+        "Address": "Namakkal",
+        "Treatments": [
+            "Consultation",
+            "Ultrasound Scan"
+        ],
+        "Status": "Admitted"
+    },
+    "P10": {
+        "Name": "Vijay",
+        "Age": 36,
+        "Admitted Date": "2024-02-01",
+        "Phone Number": "9845612345",
+        "Gender": "M",
+        "Address": "Thanjavur",
+        "Treatments": [
+            "Consultation",
+            "X-Ray Scan"
+        ],
+        "Status": "Discharged"
+    },
+    "P11": {
+        "Name": "Kavya",
+        "Age": 23,
+        "Admitted Date": "2024-06-18",
+        "Phone Number": "9786452310",
+        "Gender": "F",
+        "Address": "Tirunelveli",
+        "Treatments": [
+            "Consultation",
+            "Blood Test"
+        ],
+        "Status": "Admitted"
+    },
+    "P12": {
+        "Name": "Ramesh",
+        "Age": 60,
+        "Admitted Date": "2022-11-05",
+        "Phone Number": "9445566778",
+        "Gender": "M",
+        "Address": "Karur",
+        "Treatments": [
+            "Consultation",
+            "ECG",
+            "CT Scan"
+        ],
+        "Status": "Discharged"
+    },
+    "P13": {
+        "Name": "Nithya",
+        "Age": 28,
+        "Admitted Date": "2024-04-09",
+        "Phone Number": "9887766554",
+        "Gender": "F",
+        "Address": "Pollachi",
+        "Treatments": [
+            "Consultation",
+            "Ultrasound Scan"
+        ],
+        "Status": "Admitted"
+    },
+    "P14": {
+        "Name": "Lokesh",
+        "Age": 33,
+        "Admitted Date": "2023-10-27",
+        "Phone Number": "9977554433",
+        "Gender": "M",
+        "Address": "Kanchipuram",
+        "Treatments": [
+            "Consultation",
+            "Physiotherapy Session"
+        ],
+        "Status": "Discharged"
+    },
+    "P15": {
+        "Name": "Sneha",
+        "Age": 26,
+        "Admitted Date": "2024-07-01",
+        "Phone Number": "9665544332",
+        "Gender": "F",
+        "Address": "Hosur",
+        "Treatments": [
+            "Consultation",
+            "Blood Test"
+        ],
+        "Status": "Admitted"
+    },
+    "P16": {
+        "Name": "Balaji",
+        "Age": 48,
+        "Admitted Date": "2023-06-14",
+        "Phone Number": "9556677889",
+        "Gender": "M",
+        "Address": "Tiruppur",
+        "Treatments": [
+            "Consultation",
+            "X-Ray Scan"
+        ],
+        "Status": "Discharged"
+    },
+    "P17": {
+        "Name": "Aishwarya",
+        "Age": 35,
+        "Admitted Date": "2024-05-20",
+        "Phone Number": "9443322110",
+        "Gender": "F",
+        "Address": "Dindigul",
+        "Treatments": [
+            "Consultation",
+            "MRI Scan"
+        ],
+        "Status": "Admitted"
+    },
+    "P18": {
+        "Name": "Manoj",
+        "Age": 41,
+        "Admitted Date": "2023-08-03",
+        "Phone Number": "9332211445",
+        "Gender": "M",
+        "Address": "Ariyalur",
+        "Treatments": [
+            "Consultation",
+            "CT Scan"
+        ],
+        "Status": "Discharged"
+    },
+    "P19": {
+        "Name": "Pooja",
+        "Age": 22,
+        "Admitted Date": "2024-09-11",
+        "Phone Number": "9223344556",
+        "Gender": "F",
+        "Address": "Cuddalore",
+        "Treatments": [
+            "Consultation",
+            "Blood Test"
+        ],
+        "Status": "Admitted"
+    },
+    "P20": {
+        "Name": "Senthil",
+        "Age": 55,
+        "Admitted Date": "2022-12-29",
+        "Phone Number": "9112233445",
+        "Gender": "M",
+        "Address": "Kumbakonam",
+        "Treatments": [
+            "Consultation",
+            "ECG"
+        ],
+        "Status": "Discharged"
+    },
+    "P21": {
+        "Name": "Harini",
+        "Age": 30,
+        "Admitted Date": "2024-03-05",
+        "Phone Number": "9001122334",
+        "Gender": "F",
+        "Address": "Mayiladuthurai",
+        "Treatments": [
+            "Consultation",
+            "Ultrasound Scan"
+        ],
+        "Status": "Admitted"
+    },
+    "P22": {
+        "Name": "Prakash",
+        "Age": 38,
+        "Admitted Date": "2023-04-18",
+        "Phone Number": "9889900011",
+        "Gender": "M",
+        "Address": "Perambalur",
+        "Treatments": [
+            "Consultation",
+            "Physiotherapy Session"
+        ],
+        "Status": "Discharged"
+    },
+    "P23": {
+        "Name": "Janani",
+        "Age": 27,
+        "Admitted Date": "2024-10-02",
+        "Phone Number": "9777888999",
+        "Gender": "F",
+        "Address": "Sivakasi",
+        "Treatments": [
+            "Consultation",
+            "MRI Scan"
+        ],
+        "Status": "Admitted"
+    },
+    "P24": {
+        "Name": "Saravanan",
+        "Age": 44,
+        "Admitted Date": "2023-01-16",
+        "Phone Number": "9666777888",
+        "Gender": "M",
+        "Address": "Ramanathapuram",
+        "Treatments": [
+            "Consultation",
+            "X-Ray Scan"
+        ],
+        "Status": "Discharged"
+    },
+    "P25": {
+        "Name": "Keerthi",
+        "Age": 19,
+        "Admitted Date": "2024-11-21",
+        "Phone Number": "9555444333",
+        "Gender": "F",
+        "Address": "Theni",
+        "Treatments": [
+            "Consultation",
+            "Blood Test"
+        ],
+        "Status": "Admitted"
     }
 }

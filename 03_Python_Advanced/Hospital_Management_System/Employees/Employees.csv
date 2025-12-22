@@ -1,0 +1,21 @@
+Emp_ID,Password,Emp_Name,Emp_DOB,Emp_PhoneNumber,Emp_Type,Emp_Address,Emp_Designation,Emp_Department,Emp_Salary,Doctor
+E001,pass001,Dr Arun Kumar,1985-06-12,9080967475,Permanent,Chennai,Cardiologist,Cardiology,120000,Yes
+E002,pass002,Dr Meena Iyer,1988-09-21,9123456781,Permanent,Coimbatore,Neurologist,Neurology,115000,Yes
+E003,pass003,Dr Ravi Shankar,1982-01-15,9786543212,Permanent,Madurai,Orthopedic,Orthopedics,110000,Yes
+E004,pass004,Dr Anjali Rao,1990-04-10,9876501234,Permanent,Salem,Gynecologist,Gynecology,105000,Yes
+E005,pass005,Dr Karthik Raj,1987-11-05,9123409876,Permanent,Tirunelveli,Pediatrician,Pediatrics,100000,Yes
+E006,pass006,Dr Suresh N,1983-08-18,9345678123,Permanent,Trichy,Physician,General Medicine,95000,Yes
+E007,pass007,Priya Devi,1992-03-22,9123456780,Permanent,Madurai,Nurse,General,35000,No
+E008,pass008,Anitha R,1994-07-30,9876123456,Permanent,Erode,Nurse,ICU,38000,No
+E009,pass009,Ramesh Kumar,1991-12-14,9567890123,Permanent,Chennai,Receptionist,Front Office,30000,No
+E010,pass010,Sneha S,1993-05-19,9988776655,Permanent,Salem,Receptionist,Front Office,30000,No
+E011,pass011,Mohan Das,1986-10-25,9445566778,Permanent,Coimbatore,Accountant,Accounts,45000,No
+E012,pass012,Deepa Lakshmi,1989-02-11,9556677889,Permanent,Chennai,Accountant,Accounts,47000,No
+E013,pass013,Vijay Kumar,1990-06-07,9667788990,Contract,Erode,Lab Technician,Laboratory,40000,No
+E014,pass014,Divya R,1995-09-28,9778899001,Contract,Trichy,Pharmacist,Pharmacy,42000,No
+E015,pass015,Saravanan M,1984-01-03,9889900112,Permanent,Thanjavur,Admin Officer,Administration,55000,No
+E016,pass016,Kavitha P,1996-08-16,9990011223,Contract,Karur,Data Entry,Records,28000,No
+E017,pass017,Prakash S,1987-03-09,9001122334,Permanent,Vellore,Security,Security,25000,No
+E018,pass018,Uma Maheshwari,1993-11-27,9112233445,Permanent,Chennai,Dermatologist,Dermatology,98000,Yes
+E019,pass019,Dr Nitin Verma,1981-04-14,9223344556,Permanent,Bangalore,Physician,Emergency,102000,Yes
+E020,pass020,Latha S,1997-12-02,9334455667,Contract,Pondicherry,Nurse,General,36000,No
